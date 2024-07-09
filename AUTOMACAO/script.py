@@ -26,7 +26,7 @@ pa.press('enter')
 time.sleep(3)
 # Importar a base de dados
 
-tabela = pd.read_csv('produtos.csv')
-print('tabela')
+tabela = pd.read_csv("C:/Users/Juninho/Documents/GitHub/Hashtag-Python/AUTOMACAO/produtos.csv")
+print(tabela)
 
 # Cadastrar os produtos
