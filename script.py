@@ -29,34 +29,37 @@ time.sleep(3)
 tabela = pd.read_csv("produtos.csv")
 print(tabela)
 
+
 # Cadastrar os produtos
-for i in range(3):
+for linha in tabela.index:
     #codigo
     pa.click(x=509, y=260)
-    pa.write('Codigo')
+    pa.write(str(tabela.loc[linha, 'codigo']))
 
     #marca
     pa.press('tab')
-    pa.write('Marca')
+    pa.write(str(tabela.loc[linha, 'marca']))
 
     #tipo
     pa.press('tab')
-    pa.write('tipo')
+    pa.write(str(tabela.loc[linha, 'tipo']))
 
     #categoria
     pa.press('tab')
-    pa.write('Categoria')
+    pa.write(str(tabela.loc[linha, 'categoria']))
 
     #preço
     pa.press('tab')
-    pa.write('Preço')
+    pa.write(str(tabela.loc[linha, 'preco_unitario']))
 
     #custo
     pa.press('tab')
-    pa.write('custo')
+    pa.write(str(tabela.loc[linha, 'custo']))
 
     #Obs
     pa.press('tab')
-    pa.write('Obs')
+    obs = str(tabela.loc[linha, 'obs'])
+    if obs != 'nan':
+        pa.write(obs)
     pa.press('enter')
     pa.scroll(500)
