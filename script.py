@@ -14,7 +14,7 @@ pa.press('enter')
 pa.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pa.press('enter')
 
-time.sleep(3)
+time.sleep(5)
 
 pa.click(x=580, y=374)
 pa.hotkey('ctrl', 'a')
